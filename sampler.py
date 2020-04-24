@@ -20,7 +20,7 @@ class GibbsSampler:
 
     def _gibbs(self, iterations):
 
-        Z = np.zeros(len(self.B), dtype=np.int8)
+        Z = np.zeros(len(self.B), dtype=np.int16)
         n_wz = np.zeros((len(self.V), self.num_topics), dtype=int)
         n_z = np.zeros(self.num_topics, dtype=int)
         theta = np.random.dirichlet([self.alpha] * self.num_topics, 1)
