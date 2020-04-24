@@ -1,3 +1,4 @@
+```python 
 from bitermizer import GibbsSampler
 from bitermizer import BiTermizer
 
@@ -11,3 +12,4 @@ topics = btm.fit_transform(b.get_biterms(), iterations=3)
 btm.summarize(b.vectors,10)
 
 btm.transform(b.unseen_biterms([lemmatize("назначить испытательный срок")])).argmax()
+```
