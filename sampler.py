@@ -28,6 +28,7 @@ class GibbsSampler:
         for i, b_i in enumerate(self.B):
             #topic = np.random.choice(self.K, 1)[0]
             topic = np.random.choice(self.num_topics, 1, p=theta[0,:])[0]
+	    print(topic)
             n_wz[b_i[0], topic] += 1
             n_wz[b_i[1], topic] += 1
             n_z[topic] += 1
